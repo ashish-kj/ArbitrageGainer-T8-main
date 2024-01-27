@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ArbitrageGainer_T8</RootNamespace>
+    <UserSecretsId>your-project-name-secrets</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\Models.fs" />
+    <Compile Include="Services\CurrencyPairCalculation.fs" />
+    <Compile Include="Services\HistoricalOpportunityCalculation.fs" />
+    <Compile Include="Services\RealTimeTrading.fs" />
+    <Compile Include="Services\ProfitLossCalculation.fs" />
+    <Compile Include="InfraStructure\Daos\StrategyDao.fs" />
+    <Compile Include="InfraStructure\Daos\CurrencyPairDao.fs" />
+    <Compile Include="InfraStructure\Daos\OpportunityDao.fs" />
+    <Compile Include="InfraStructure\Daos\OrderDao.fs" />
+    <Compile Include="InfraStructure\Daos\TransactionDao.fs" />
+    <Compile Include="InfraStructure\Daos\ProfitDao.fs" />
+    <Compile Include="InfraStructure\Daos\OutflowDao.fs" />
+    <Compile Include="InfraStructure\Daos\InflowDao.fs" />
+    <Compile Include="ServiceBusHandlers\QueueSender.fs" />
+    <Compile Include="InfraStructure\Services\EmailService.fs" />
+    <Compile Include="InfraStructure\Services\OrderManagement.fs" />
+    <Compile Include="InfraStructure\Services\CurrencyPairService.fs" />
+    <Compile Include="InfraStructure\Services\HistoricalOpportunityService.fs" />
+    <Compile Include="InfraStructure\Services\RealTimeDataWebSocket.fs" />
+    <Compile Include="InfraStructure\Services\ProfitLossService.fs" />
+    <Compile Include="ServiceBusHandlers\QueueReceiver.fs" />
+    <Compile Include="InfraStructure\Controllers\StrategyController.fs" />
+    <Compile Include="InfraStructure\Controllers\CurrencyPairController.fs" />
+    <Compile Include="InfraStructure\Controllers\OpportunityController.fs" />
+    <Compile Include="InfraStructure\Controllers\TradingController.fs" />
+    <Compile Include="InfraStructure\Controllers\ProfitLossController.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Data.Tables" Version="12.8.2" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.1" />
+    <PackageReference Include="FSharp.Data" Version="6.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+    <PackageReference Include="Suave" Version="2.6.2" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.37.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="*.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

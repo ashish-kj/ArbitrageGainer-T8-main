@@ -1,0 +1,26 @@
+[
+  {
+    "CurrencyPair": "MKR-USD",
+    "OpportunityNumber": 61
+  },
+  {
+    "CurrencyPair": "FTM-USD",
+    "OpportunityNumber": 5
+  },
+  {
+    "CurrencyPair": "ZRX-USD",
+    "OpportunityNumber": 4
+  },
+  {
+    "CurrencyPair": "ADA-USD",
+    "OpportunityNumber": 19
+  },
+  {
+    "CurrencyPair": "ANT-USD",
+    "OpportunityNumber": 2
+  },
+  {
+    "CurrencyPair": "DAI-USD",
+    "OpportunityNumber": 1
+  }
+]
